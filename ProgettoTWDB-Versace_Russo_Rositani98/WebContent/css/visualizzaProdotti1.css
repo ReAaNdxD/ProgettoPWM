@@ -1,0 +1,91 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+.container-my{
+    width: 100% !important;
+    margin-right: auto !important;
+    margin-right: auto !important;    
+}
+
+.row-my {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f4f4f4 !important;
+    border-top: 1px solid #c4c4c4 !important;
+}
+.sottocategoria,
+.categoria,
+.prodotto{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-left:1px solid #c4c4c4;
+    width: 500px; 
+    height: 100px;   
+    flex: 33%;
+    font-size: 18px;
+    font-family: "Amazon Ember";
+    place-items: center;
+    text-align: center;
+    color: #535353;
+    
+  
+}
+
+
+label {
+    position: relative;
+    top: 12px;
+}
+
+select {
+    width: 200px;
+    height: 20px;
+    border-radius: 20px;
+    padding-left: 8px;
+    border:1px solid #a3a3a3;
+        font-size: 14px;
+    font-family: "Amazon Ember";
+    place-items: center;
+    text-align: center;
+    color: #535353;
+    
+}
+
+input {
+    width: 200px;
+    height: 20px;
+    border-radius: 20px;
+    padding-left: 8px;
+    border:1px solid #a3a3a3;
+    font-size: 14px;
+    font-family: "Amazon Ember";
+    place-items: center;
+    text-align: center;
+    color: #535353;
+    
+}
+input[type=submit] {
+    height: 38px;
+    width: 83.2px;
+    text-align: center;
+    padding: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+@media (max-width: 750px) {
+    .sottocategoria,
+    .categoria,
+    .prodotto{   
+        flex: 100%;
+        font-size: 17px;
+        border-bottom: 1px solid #c4c4c4;
+    }
+    
+ }

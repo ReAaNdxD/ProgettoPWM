@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.25" height="11" viewBox="0 0 387 132">
+  <defs>
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Monoton');
+      .cls-1 {
+        font-size: 150px;
+        fill: #888;
+        font-family:'Monoton', cursive;
+      }
+    </style>
+  </defs>
+  <text id="DAG" class="cls-1" x="-7.001" y="126.575">DAG</text>
+</svg>

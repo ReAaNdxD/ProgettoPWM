@@ -1,0 +1,27 @@
+input.success {
+	border: 2px solid lime !important;
+}
+
+input.error {
+	border: 2px solid #ea0303 !important;
+}
+
+.error {
+	border-color: 2px red !important;
+}
+
+small {
+	color: black;
+	margin-bottom: 2%;
+	visibility: visible;
+	font-family: cursive;
+	font-weight: 600;
+}
+
+small.error {
+	color: #ea0303 !important;
+	margin-bottom: 2%;
+	visibility: visible;
+	font-family: cursive;
+	font-size: 12px;
+}

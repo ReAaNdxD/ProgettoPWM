@@ -1,0 +1,69 @@
+.nav_container {
+	display: flex;
+	box-sizing: border-box;
+	/* border: 1px solid red; */
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	color: whitesmoke;
+}
+
+.nav_item {
+	padding-left: 4px;
+	flex-basis: 25%;
+	padding: 1px;
+	/* border: 1px solid red; */
+}
+
+.nav_image {
+	display: flex;
+}
+
+.profile_contenent {
+	/* border: 1px solid rgb(17, 0, 255); */
+	/* text-align: center; */
+	padding-left: 4px;
+}
+
+.title {
+	font-size: 16px;
+	flex-basis: 100%;
+	font: italic;
+	font-style: italic;
+	color: rgb(255, 115, 0);
+	font-weight: bold;
+}
+
+.nav_item a {
+	padding-left: 20px;
+	font-style: normal;
+	font-size: 22px;
+	text-align: center;
+}
+
+@media ( max-width :998px) {
+	.nav_item {
+		flex-basis: 33.3333%;
+		padding: 1px;
+		/* border: 1px solid red; */
+		width: 100%;
+		/* flex-grow: 2; */
+	}
+	.nav_item a {
+		font-style: normal;
+		font-size: 22px;
+		text-align: center;
+		width: 100%;
+	}
+	.btn_link {
+		flex-grow: 2;
+	}
+}
+
+.height {
+	background-size: cover;
+	/*  La mia immagine del carosello occuperà tutto lo spazio disponibile sia in larghezza che in altezza*/
+	background-position: center center;
+	/*La centro sia orizzontalmente che verticalmente  */
+	min-height: 600px;
+}
