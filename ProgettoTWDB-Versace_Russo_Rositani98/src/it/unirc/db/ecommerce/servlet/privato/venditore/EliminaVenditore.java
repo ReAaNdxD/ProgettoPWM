@@ -1,13 +1,13 @@
 package it.unirc.db.ecommerce.servlet.privato.venditore;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 
 import it.unirc.db.ecommerce.beans.Venditore;
 import it.unirc.db.ecommerce.beans.VenditoreDAO;

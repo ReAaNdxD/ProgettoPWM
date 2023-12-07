@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 
 import it.unirc.db.ecommerce.beans.Articolo;
 import it.unirc.db.ecommerce.beans.ArticoloDAO;
-import it.unirc.db.ecommerce.beans.ProdottoDAO;
 import it.unirc.db.ecommerce.beans.Venditore;
 
 /**

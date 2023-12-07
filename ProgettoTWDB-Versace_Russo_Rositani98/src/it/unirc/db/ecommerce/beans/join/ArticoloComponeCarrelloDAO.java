@@ -19,7 +19,7 @@ public class ArticoloComponeCarrelloDAO {
 		Compone vectorCompone = new Compone();
 		vectorCompone.setIdArticolo(rs.getInt("idArticolo"));
 		vectorCompone.setPrezzoAcquisto(rs.getFloat("prezzoAcquisto"));
-		vectorCompone.setQuantità(rs.getInt("quantita"));
+		vectorCompone.setquantita(rs.getInt("quantita"));
 		return vectorCompone;
 	}
 

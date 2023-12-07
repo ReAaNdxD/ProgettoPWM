@@ -17,8 +17,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import it.unirc.db.ecommerce.beans.Categoria;
 import it.unirc.db.ecommerce.beans.Prodotto;
 import it.unirc.db.ecommerce.beans.ProdottoDAO;
-import it.unirc.db.ecommerce.beans.Sottocategoria;
-import it.unirc.db.ecommerce.beans.SottocategoriaDAO;
 
 /**
  * Servlet implementation class APISottocategoria

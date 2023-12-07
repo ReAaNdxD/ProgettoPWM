@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.SendResult;
-
-import com.sun.javafx.beans.IDProperty;
 
 import it.unirc.db.ecommerce.beans.Venditore;
 import it.unirc.db.ecommerce.beans.VenditoreDAO;

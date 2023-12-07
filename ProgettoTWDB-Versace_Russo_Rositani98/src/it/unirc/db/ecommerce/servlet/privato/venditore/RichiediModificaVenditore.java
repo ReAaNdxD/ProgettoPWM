@@ -7,10 +7,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import it.unirc.db.ecommerce.beans.Venditore;
-import it.unirc.db.ecommerce.beans.VenditoreDAO;
 
 
 
@@ -34,8 +30,6 @@ public class RichiediModificaVenditore extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session= request.getSession();
-		Venditore venditore=(Venditore) session.getAttribute("Venditore");
 		request.getRequestDispatcher("modificaVenditore.jsp").forward(request, response);
 		
 	}

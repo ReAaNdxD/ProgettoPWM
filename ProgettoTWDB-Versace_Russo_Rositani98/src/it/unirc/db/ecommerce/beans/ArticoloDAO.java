@@ -10,7 +10,6 @@ import java.util.Vector;
 import it.unirc.db.ecommerce.utils.DBManager;
 import it.unirc.db.ecommerce.views.GridProduct;
 import it.unirc.db.ecommerce.views.ViewProduct;
-import it.unirc.db.ecommerce.beans.Articolo;
 
 public class ArticoloDAO {
 
@@ -229,7 +228,7 @@ public GridProduct getProduct(Articolo articolo) {
 		System.out.println("Offset " + offset);
 		System.out.println("RecordsPerPage " + recordsPerPage);
 		String query = "SELECT  a.idprodotto,\r\n" + "        a.idarticolo,\r\n" + "        a.prezzo,\r\n"
-				+ "        a.quantita AS disponibilità ,\r\n" + "        a.nomeAzienda, \r\n" + "        a.nome, \r\n"
+				+ "        a.quantita AS disponibilitï¿½ ,\r\n" + "        a.nomeAzienda, \r\n" + "        a.nome, \r\n"
 				+ "        a.marca,\r\n" + "        a.idsottocategoria \r\n" + "FROM \r\n" + "(\r\n" + "    SELECT \r\n"
 				+ "        a.idprodotto,\r\n"
 				+ "        ROW_NUMBER() OVER (PARTITION BY a.idprodotto ORDER BY a.idvenditore)as num,\r\n"
@@ -325,7 +324,7 @@ public GridProduct getProduct(Articolo articolo) {
 						"    SELECT  a.idprodotto,\r\n" + 
 						"            a.idarticolo,\r\n" + 
 						"            a.prezzo,\r\n" + 
-						"            a.quantita AS disponibilità,\r\n" + 
+						"            a.quantita AS disponibilitï¿½,\r\n" + 
 						"            V.nomeAzienda, \r\n" + 
 						"            p.nome, \r\n" + 
 						"            p.marca,\r\n" + 
@@ -446,7 +445,7 @@ public GridProduct getProduct(Articolo articolo) {
 
 	public Vector<ViewProduct> getAllArticoliCliente(Cliente cliente) {
 		Vector<ViewProduct> vector = new Vector<ViewProduct>();
-		String query = "SELECT A.idArticolo, p.nome, CO.quantita, CO.prezzoAcquisto, V.idVenditore, V.nomeAzienda, C.idCarrello, A.quantita as disponibilità\r\n"
+		String query = "SELECT A.idArticolo, p.nome, CO.quantita, CO.prezzoAcquisto, V.idVenditore, V.nomeAzienda, C.idCarrello, A.quantita as disponibilitï¿½\r\n"
 				+ "FROM carrello C JOIN cliente CL ON C.idCliente=CL.idCliente\r\n"
 				+ "				JOIN compone CO ON C.idCarrello=CO.idCarrello\r\n"
 				+ "                JOIN articolo A ON CO.idArticolo=A.idArticolo\r\n"
@@ -467,7 +466,7 @@ public GridProduct getProduct(Articolo articolo) {
 				viewProduct.setQuantita(rs.getInt("quantita"));
 				viewProduct.setPrezzoAcquisto(rs.getDouble("prezzoAcquisto"));
 				viewProduct.setNomeAzienda(rs.getString("nomeAzienda"));
-				viewProduct.setDisponibilita(rs.getInt("disponibilità"));
+				viewProduct.setDisponibilita(rs.getInt("disponibilitï¿½"));
 				viewProduct.setIdCarrello(rs.getInt("idCarrello"));
 				vector.add(viewProduct);
 			}
@@ -478,7 +477,7 @@ public GridProduct getProduct(Articolo articolo) {
 	}
 
 	public boolean aggiornaQuantita(Articolo articolo, int quantita) { // Da richiamare soltanto con il
-																		// vincoloA1(quantità)
+																		// vincoloA1(quantitï¿½)
 		String query = "UPDATE articolo SET quantita=? WHERE idArticolo=?";
 		boolean esito = false;
 		conn = DBManager.startConnection();
@@ -502,7 +501,7 @@ public GridProduct getProduct(Articolo articolo) {
 
 	public int vincoloA1(Articolo articolo) {
 		/*
-		 * La quantità di articolo deve essere sempre uguale alla somma delle quantità
+		 * La quantitï¿½ di articolo deve essere sempre uguale alla somma delle quantitï¿½
 		 * in dispone associate allo stesso articolo
 		 */
 		String query = "SELECT SUM(quantita) AS quantita \r\n" + "FROM dispone\r\n" + "GROUP BY idArticolo\r\n"

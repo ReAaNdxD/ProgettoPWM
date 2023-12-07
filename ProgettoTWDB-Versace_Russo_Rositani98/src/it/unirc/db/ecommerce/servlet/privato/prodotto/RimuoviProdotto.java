@@ -1,6 +1,7 @@
 package it.unirc.db.ecommerce.servlet.privato.prodotto;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,12 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
-import com.sun.java.swing.plaf.windows.resources.windows;
-
 import it.unirc.db.ecommerce.beans.Prodotto;
 import it.unirc.db.ecommerce.beans.ProdottoDAO;
-import javafx.scene.control.Alert;
 
 /**
  * Servlet implementation class RimuoviProdotto
@@ -47,7 +44,7 @@ public class RimuoviProdotto extends HttpServlet {
 			response.sendRedirect("VisualizzaProdotto");
 			return;
 		}else {
-			System.out.println("Non lo elimina perchè è un articolo");
+			System.out.println("Non lo elimina perchï¿½ ï¿½ un articolo");
 			request.setAttribute("erroreProdotto", errore);
 		    request.getRequestDispatcher("VisualizzaProdotto").forward(request, response);
 		    return;

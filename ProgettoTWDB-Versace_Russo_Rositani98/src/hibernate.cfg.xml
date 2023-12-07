@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- SQL Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Database Connection Settings -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/progetto_pwm</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<property name="connection.useSSL">false</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="connection.serverTimezone">Europe/Rome</property>
+		<property name="connection.allowPublicKeyRetrieval">true</property>
+		
+		
+<mapping resource="it/unirc/pwm/ht/Prodotto.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Articolo.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Sottocategoria.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Compone.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Venditore.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Cartacredito.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Categoria.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Metodospedizione.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Magazzino.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Clienteprime.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Statoordine.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Pagamento.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Cliente.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Ordine.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Carrello.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Dispone.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Indirizzospedizione.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Spedizione.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

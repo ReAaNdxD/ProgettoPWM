@@ -5,7 +5,7 @@ public class VecComp {
 	
 	private int idArticolo;
 	private float prezzoAcquisto;
-	private int quantità;
+	private int quantita;
 	
 	
 	
@@ -14,11 +14,11 @@ public class VecComp {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public VecComp(int idArticolo, float prezzoAcquisto, int quantità) {
+	public VecComp(int idArticolo, float prezzoAcquisto, int quantita) {
 		super();
 		this.idArticolo = idArticolo;
 		this.prezzoAcquisto = prezzoAcquisto;
-		this.quantità = quantità;
+		this.quantita = quantita;
 	}
 
 	public int getIdArticolo() {
@@ -33,16 +33,16 @@ public class VecComp {
 	public void setPrezzoAcquisto(float prezzoAcquisto) {
 		this.prezzoAcquisto = prezzoAcquisto;
 	}
-	public int getQuantità() {
-		return quantità;
+	public int getquantita() {
+		return quantita;
 	}
-	public void setQuantità(int quantità) {
-		this.quantità = quantità;
+	public void setquantita(int quantita) {
+		this.quantita = quantita;
 	}
 	@Override
 	public String toString() {
-		return "VectorCompone [idArticolo=" + idArticolo + ", prezzoAcquisto=" + prezzoAcquisto + ", quantità="
-				+ quantità + "]";
+		return "VectorCompone [idArticolo=" + idArticolo + ", prezzoAcquisto=" + prezzoAcquisto + ", quantita="
+				+ quantita + "]";
 	}
 	
 	

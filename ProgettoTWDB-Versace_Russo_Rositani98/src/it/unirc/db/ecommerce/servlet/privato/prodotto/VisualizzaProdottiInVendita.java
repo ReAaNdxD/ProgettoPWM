@@ -12,12 +12,6 @@ import javax.servlet.http.HttpSession;
 
 import it.unirc.db.ecommerce.beans.Categoria;
 import it.unirc.db.ecommerce.beans.CategoriaDAO;
-import it.unirc.db.ecommerce.beans.Prodotto;
-import it.unirc.db.ecommerce.beans.ProdottoDAO;
-import it.unirc.db.ecommerce.beans.SottocategoriaDAO;
-import it.unirc.db.ecommerce.beans.Venditore;
-import it.unirc.db.ecommerce.beans.VenditoreDAO;
-import it.unirc.db.ecommerce.views.ViewProductSeller;
 
 /**
  * Servlet implementation class AggiungiArticoloInVendita
