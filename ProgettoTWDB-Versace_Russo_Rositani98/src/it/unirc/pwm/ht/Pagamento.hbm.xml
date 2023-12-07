@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 7 dic 2023, 12:33:12 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Pagamento" optimistic-lock="none" table="pagamento">
+        <id name="numeroOrdine" type="int">
+            <column name="numeroOrdine"/>
+            <generator class="foreign">
+                <param name="property">ordine</param>
+            </generator>
+        </id>
+        <many-to-one class="it.unirc.pwm.ht.Cartacredito" fetch="select" name="cartacredito">
+            <column name="idCarta" not-null="true"/>
+        </many-to-one>
+        <one-to-one class="it.unirc.pwm.ht.Ordine" constrained="true" name="ordine"/>
+        <property name="data" type="date">
+            <column length="10" name="data" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

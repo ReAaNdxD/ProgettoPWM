@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 7 dic 2023, 12:33:12 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Ordine" optimistic-lock="none" table="ordine">
+        <id name="numeroOrdine" type="java.lang.Integer">
+            <column name="numeroOrdine"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="it.unirc.pwm.ht.Metodospedizione" fetch="select" name="metodospedizione">
+            <column name="idMetodo" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="it.unirc.pwm.ht.Indirizzospedizione" fetch="select" name="indirizzospedizione">
+            <column name="idIndirizzoSpedizione"/>
+        </many-to-one>
+        <many-to-one class="it.unirc.pwm.ht.Carrello" fetch="select" name="carrello">
+            <column name="idCarrello" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="it.unirc.pwm.ht.Statoordine" fetch="select" name="statoordine">
+            <column name="idStato" not-null="true"/>
+        </many-to-one>
+        <property name="costoTotale" type="float">
+            <column name="costoTotale" not-null="true" precision="12" scale="0"/>
+        </property>
+        <property name="dataCreazione" type="date">
+            <column length="10" name="dataCreazione" not-null="true"/>
+        </property>
+        <one-to-one class="it.unirc.pwm.ht.Pagamento" name="pagamento"/>
+        <set fetch="select" inverse="true" lazy="true" name="spediziones" table="spedizione">
+            <key>
+                <column name="numeroOrdine" not-null="true"/>
+            </key>
+            <one-to-many class="it.unirc.pwm.ht.Spedizione"/>
+        </set>
+    </class>
+</hibernate-mapping>

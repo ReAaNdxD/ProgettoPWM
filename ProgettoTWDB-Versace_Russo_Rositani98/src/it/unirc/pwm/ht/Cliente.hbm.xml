@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 7 dic 2023, 12:33:12 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Cliente" optimistic-lock="none" table="cliente">
+        <id name="idCliente" type="java.lang.Integer">
+            <column name="idCliente"/>
+            <generator class="identity"/>
+        </id>
+        <property name="email" type="string">
+            <column length="45" name="email" not-null="true" unique="true"/>
+        </property>
+        <property name="password" type="string">
+            <column length="45" name="password" not-null="true"/>
+        </property>
+        <property name="nome" type="string">
+            <column length="45" name="nome" not-null="true"/>
+        </property>
+        <property name="cognome" type="string">
+            <column length="45" name="cognome" not-null="true"/>
+        </property>
+        <property name="dataDiNascita" type="date">
+            <column length="10" name="dataDiNascita" not-null="true"/>
+        </property>
+        <one-to-one class="it.unirc.pwm.ht.Clienteprime" name="clienteprime"/>
+        <set fetch="select" inverse="true" lazy="true" name="carrellos" table="carrello">
+            <key>
+                <column name="idCliente" not-null="true"/>
+            </key>
+            <one-to-many class="it.unirc.pwm.ht.Carrello"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="indirizzospediziones" table="indirizzospedizione">
+            <key>
+                <column name="idCliente" not-null="true"/>
+            </key>
+            <one-to-many class="it.unirc.pwm.ht.Indirizzospedizione"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="cartacreditos" table="possiede">
+            <key>
+                <column name="idCliente" not-null="true"/>
+            </key>
+            <many-to-many entity-name="it.unirc.pwm.ht.Cartacredito">
+                <column name="idCartaCredito" not-null="true"/>
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

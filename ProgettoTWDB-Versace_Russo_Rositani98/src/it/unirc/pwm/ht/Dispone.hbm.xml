@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 7 dic 2023, 12:33:12 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Dispone" optimistic-lock="none" table="dispone">
+        <composite-id class="it.unirc.pwm.ht.DisponeId" name="id">
+            <key-property name="codiceMagazzino" type="int">
+                <column name="codiceMagazzino"/>
+            </key-property>
+            <key-property name="idArticolo" type="int">
+                <column name="idArticolo"/>
+            </key-property>
+        </composite-id>
+        <many-to-one class="it.unirc.pwm.ht.Articolo" fetch="select" insert="false" name="articolo" update="false">
+            <column name="idArticolo" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="it.unirc.pwm.ht.Magazzino" fetch="select" insert="false" name="magazzino" update="false">
+            <column name="codiceMagazzino" not-null="true"/>
+        </many-to-one>
+        <property name="quantita" type="int">
+            <column name="quantita" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

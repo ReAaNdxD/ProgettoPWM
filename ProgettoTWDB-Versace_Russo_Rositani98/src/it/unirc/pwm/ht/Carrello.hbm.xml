@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 7 dic 2023, 12:33:12 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Carrello" optimistic-lock="none" table="carrello">
+        <id name="idCarrello" type="java.lang.Integer">
+            <column name="idCarrello"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="it.unirc.pwm.ht.Cliente" fetch="select" name="cliente">
+            <column name="idCliente" not-null="true"/>
+        </many-to-one>
+        <property name="attivo" type="byte">
+            <column name="attivo" not-null="true"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="ordines" table="ordine">
+            <key>
+                <column name="idCarrello" not-null="true"/>
+            </key>
+            <one-to-many class="it.unirc.pwm.ht.Ordine"/>
+        </set>
+        <set fetch="select" inverse="true" lazy="true" name="compones" table="compone">
+            <key>
+                <column name="idCarrello" not-null="true"/>
+            </key>
+            <one-to-many class="it.unirc.pwm.ht.Compone"/>
+        </set>
+    </class>
+</hibernate-mapping>
