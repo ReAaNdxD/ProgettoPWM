@@ -1,4 +1,3 @@
-<%@page import="com.sun.java.swing.plaf.windows.resources.windows"%>
 <%@page import="it.unirc.db.ecommerce.beans.Prodotto"%>
 <%@page import="it.unirc.db.ecommerce.beans.Sottocategoria"%>
 <%@page import="it.unirc.db.ecommerce.beans.SottocategoriaDAO"%>

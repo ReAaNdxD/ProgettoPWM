@@ -1,5 +1,5 @@
 package it.unirc.pwm.ht;
-// Generated 7 dic 2023, 14:54:20 by Hibernate Tools 6.1.3.Final
+// Generated 11 dic 2023, 17:22:19 by Hibernate Tools 6.1.3.Final
 
 
 import java.sql.Date;

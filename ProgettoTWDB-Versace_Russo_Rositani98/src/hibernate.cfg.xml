@@ -4,21 +4,15 @@
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <!-- SQL Dialect -->
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-
-		<!-- Database Connection Settings -->
-		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/progetto_pwm</property>
-		<property name="connection.username">root</property>
-		<property name="connection.password">root</property>
-		<property name="connection.useSSL">false</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
-		<property name="show_sql">true</property>
-		<property name="connection.serverTimezone">Europe/Rome</property>
-		<property name="connection.allowPublicKeyRetrieval">true</property>
-		
-		
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/progetto_pwm?useSSL=false&serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">none</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
 <mapping resource="it/unirc/pwm/ht/Prodotto.hbm.xml"/>
 <mapping resource="it/unirc/pwm/ht/Articolo.hbm.xml"/>
 <mapping resource="it/unirc/pwm/ht/Sottocategoria.hbm.xml"/>
@@ -37,5 +31,6 @@
 <mapping resource="it/unirc/pwm/ht/Dispone.hbm.xml"/>
 <mapping resource="it/unirc/pwm/ht/Indirizzospedizione.hbm.xml"/>
 <mapping resource="it/unirc/pwm/ht/Spedizione.hbm.xml"/>
+<mapping resource="it/unirc/pwm/ht/Admin.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

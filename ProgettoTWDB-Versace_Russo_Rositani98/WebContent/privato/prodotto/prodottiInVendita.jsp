@@ -1,5 +1,4 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="com.sun.java.swing.plaf.windows.resources.windows"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="it.unirc.db.ecommerce.beans.Prodotto"%>
 <%@page import="java.text.NumberFormat"%>

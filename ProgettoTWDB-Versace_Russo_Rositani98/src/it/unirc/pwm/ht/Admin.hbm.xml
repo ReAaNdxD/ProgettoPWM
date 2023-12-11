@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 11 dic 2023, 17:22:19 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Admin" optimistic-lock="none" table="admin">
+        <id name="nomeAdmin" type="string">
+            <column length="20" name="nomeAdmin"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="password" type="string">
+            <column length="20" name="password" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

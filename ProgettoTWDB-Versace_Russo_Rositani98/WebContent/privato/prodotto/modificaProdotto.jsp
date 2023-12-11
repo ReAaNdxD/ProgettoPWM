@@ -1,4 +1,3 @@
-<%@page import="javafx.scene.control.Alert"%>
 <%@page import="it.unirc.db.ecommerce.beans.Sottocategoria"%>
 <%@page import="it.unirc.db.ecommerce.beans.SottocategoriaDAO"%>
 <%@page import="it.unirc.db.ecommerce.beans.Categoria"%>
