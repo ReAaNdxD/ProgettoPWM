@@ -12,9 +12,9 @@
         <many-to-one class="it.unirc.pwm.ht.Indirizzospedizione" fetch="select" name="indirizzospedizione">
             <column name="idIndirizzoSpedizione"/>
         </many-to-one>
-        <many-to-one class="it.unirc.pwm.ht.Carrello" fetch="select" name="carrello">
-            <column name="idCarrello" not-null="true"/>
-        </many-to-one>
+        <one-to-one class="it.unirc.pwm.ht.Carrello" fetch="select" name="carrello">
+            <!-- <column name="idCarrello" not-null="true"/> -->
+        </one-to-one>
         <many-to-one class="it.unirc.pwm.ht.Statoordine" fetch="select" name="statoordine">
             <column name="idStato" not-null="true"/>
         </many-to-one>
