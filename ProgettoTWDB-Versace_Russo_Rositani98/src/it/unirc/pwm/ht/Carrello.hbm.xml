@@ -12,12 +12,12 @@
         <property name="attivo" type="byte">
             <column name="attivo" not-null="true"/>
         </property>
-        <set fetch="select" inverse="true" lazy="true" name="ordines" table="ordine">
+       <!--  <set fetch="select" inverse="true" lazy="true" name="ordines" table="ordine">
             <key>
                 <column name="idCarrello" not-null="true"/>
             </key>
             <one-to-many class="it.unirc.pwm.ht.Ordine"/>
-        </set>
+        </set> -->
         <set fetch="select" inverse="true" lazy="true" name="compones" table="compone">
             <key>
                 <column name="idCarrello" not-null="true"/>

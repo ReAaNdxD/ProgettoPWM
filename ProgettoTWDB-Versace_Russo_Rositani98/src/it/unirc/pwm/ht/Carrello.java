@@ -12,7 +12,7 @@ public class Carrello implements java.io.Serializable {
 	private Integer idCarrello;
 	private Cliente cliente;
 	private byte attivo;
-	private Set ordines = new HashSet(0);
+//	private Set ordines = new HashSet(0);
 	private Set compones = new HashSet(0);
 
 	public Carrello() {
@@ -23,10 +23,10 @@ public class Carrello implements java.io.Serializable {
 		this.attivo = attivo;
 	}
 
-	public Carrello(Cliente cliente, byte attivo, Set ordines, Set compones) {
+	public Carrello(Cliente cliente, byte attivo, Set compones) {
 		this.cliente = cliente;
 		this.attivo = attivo;
-		this.ordines = ordines;
+//		this.ordines = ordines;
 		this.compones = compones;
 	}
 
@@ -54,13 +54,13 @@ public class Carrello implements java.io.Serializable {
 		this.attivo = attivo;
 	}
 
-	public Set getOrdines() {
-		return this.ordines;
-	}
+//	public Set getOrdines() {
+//		return this.ordines;
+//	}
 
-	public void setOrdines(Set ordines) {
-		this.ordines = ordines;
-	}
+//	public void setOrdines(Set ordines) {
+//		this.ordines = ordines;
+//	}
 
 	public Set getCompones() {
 		return this.compones;
