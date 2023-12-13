@@ -1,7 +1,7 @@
 package it.unirc.pwm.ht.dao;
 
 import java.sql.Date;
-import java.util.Vector;
+import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -69,18 +69,52 @@ public class ClienteDAOHibernateImpl implements ClienteDAO {
 
 	@Override
 	public boolean modifica(Cliente cliente) {
-		// TODO Auto-generated method stub
-		return false;
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = null;
+		Cliente result = null;
+
+		try {
+			transaction = session.beginTransaction();
+
+			result = session.merge(cliente);
+
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			result = null;
+		} finally {
+			session.close();
+		}
+		return result != null;
 	}
 
 	@Override
-	public Vector<Cliente> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Cliente> getAll() {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = null;
+		List<Cliente> result = null;
+
+		try {
+			transaction = session.beginTransaction();
+
+			String queryHQL = "from PersonaleTecnico";
+			result = session.createQuery(queryHQL, Cliente.class).list();
+
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			result = null;
+		} catch (Exception e) {
+			result = null;
+		} finally {
+			session.close();
+		}
+
+		return result;
 	}
 
 	@Override
-	public Vector<Cliente> getAllClientiNonPrime() {
+	public List<Cliente> getAllClientiNonPrime() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -98,19 +132,19 @@ public class ClienteDAOHibernateImpl implements ClienteDAO {
 	}
 
 	@Override
-	public Vector<Cliente> cercaClienteById(String id) {
+	public List<Cliente> cercaClienteById(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Vector<Cliente> cercaClienteByNome_Email(String string) {
+	public List<Cliente> cercaClienteByNome_Email(String string) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Vector<Customer> clientiMaxAcquisti() {
+	public List<Customer> clientiMaxAcquisti() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -141,8 +175,30 @@ public class ClienteDAOHibernateImpl implements ClienteDAO {
 
 	@Override
 	public Integer login(String email, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = null;
+		Integer result = null;
+
+		try {
+			transaction = session.beginTransaction();
+
+			String queryHQL = "select idCliente from cliente where email =? and password=?";
+			result = session.createQuery(queryHQL, Integer.class)
+					.setParameter("email", email)
+					.setParameter("password", password)
+					.getSingleResult();
+
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			result = null;
+		} catch (Exception e) {
+			result = null;
+		} finally {
+			session.close();
+		}
+
+		return result;
 	}
 
 }

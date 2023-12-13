@@ -1,7 +1,7 @@
 package it.unirc.pwm.ht.dao;
 
 import java.sql.Date;
-import java.util.Vector;
+import java.util.List;
 
 import it.unirc.db.ecommerce.views.Customer;
 import it.unirc.pwm.ht.Carrello;
@@ -16,13 +16,13 @@ public interface ClienteDAO {
 	public Cliente getIdByCarrello(Carrello carrello);
 	public boolean elimina(Cliente cliente);
 	public boolean modifica(Cliente cliente);
-	public Vector<Cliente> getAll();
-	public Vector<Cliente> getAllClientiNonPrime();
+	public List<Cliente> getAll();
+	public List<Cliente> getAllClientiNonPrime();
 	public boolean disdiciPrime1(Cliente cl);
 	public boolean assegnaCarrello(Cliente cliente);
-	public Vector<Cliente> cercaClienteById(String id);
-	public Vector<Cliente> cercaClienteByNome_Email(String string);
-	public Vector<Customer> clientiMaxAcquisti();
+	public List<Cliente> cercaClienteById(String id);
+	public List<Cliente> cercaClienteByNome_Email(String string);
+	public List<Customer> clientiMaxAcquisti();
 	public Cliente ordineEffettuatoDa(Ordine ordine);
 	public boolean checkEmail(String email);
 	public boolean checkEmailForUpdate(String email, int id);

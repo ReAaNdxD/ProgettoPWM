@@ -1,8 +1,5 @@
 package it.unirc.pwm.ht.dao;
 
-import it.unirc.pwm.ht.dao.ClienteDAO;
-
-
 public class ClienteDAOFactory {
 	private static ClienteDAO dao = null;
 	
