@@ -1,6 +1,6 @@
 package it.unirc.pwm.ht.dao;
 
-import java.util.Vector;
+import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -20,7 +20,7 @@ public class CarrelloDAOHibernateImpl implements CarrelloDAO {
 		boolean res=false;
 		try {
 			transaction = session.beginTransaction();
-			session.persist(cliente);
+			session.persist(carrello);
 			transaction.commit();
 			res = true;
 		} catch (HibernateException e) {
@@ -58,8 +58,23 @@ public class CarrelloDAOHibernateImpl implements CarrelloDAO {
 
 	@Override
 	public boolean modifica(Carrello carrello) {
-		// TODO Auto-generated method stub
-		return false;
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = null;
+		Carrello result = null;
+
+		try {
+			transaction = session.beginTransaction();
+
+			result = session.merge(carrello);
+
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			result = null;
+		} finally {
+			session.close();
+		}
+		return result != null;
 	}
 
 	@Override
@@ -69,9 +84,28 @@ public class CarrelloDAOHibernateImpl implements CarrelloDAO {
 	}
 
 	@Override
-	public Vector<Carrello> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Carrello> getAll() {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = null;
+		List<Carrello> result = null;
+
+		try {
+			transaction = session.beginTransaction();
+
+			String queryHQL = "from Carrello";
+			result = session.createQuery(queryHQL, Carrello.class).list();
+
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			result = null;
+		} catch (Exception e) {
+			result = null;
+		} finally {
+			session.close();
+		}
+
+		return result;
 	}
 
 	@Override
