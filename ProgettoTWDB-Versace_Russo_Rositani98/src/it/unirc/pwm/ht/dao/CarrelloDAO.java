@@ -1,6 +1,6 @@
 package it.unirc.pwm.ht.dao;
 
-import java.util.Vector;
+import java.util.List;
 
 import it.unirc.pwm.ht.Carrello;
 import it.unirc.pwm.ht.Cliente;
@@ -14,7 +14,7 @@ public interface CarrelloDAO {
 	public boolean elimina(Carrello carrello);
 	public boolean modifica(Carrello carrello);
 	public boolean modificaStato(Carrello carrello);
-	public Vector<Carrello> getAll();
+	public List<Carrello> getAll();
 	public boolean isCartFull(Ordine ordine);
 	public Carrello getAttivo(int cliente);
 	public Carrello getUltimoAcquisto(int cliente);
