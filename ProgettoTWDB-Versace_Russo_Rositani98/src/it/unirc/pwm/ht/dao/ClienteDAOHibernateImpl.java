@@ -97,7 +97,7 @@ public class ClienteDAOHibernateImpl implements ClienteDAO {
 		try {
 			transaction = session.beginTransaction();
 
-			String queryHQL = "from PersonaleTecnico";
+			String queryHQL = "from cliente";
 			result = session.createQuery(queryHQL, Cliente.class).list();
 
 			transaction.commit();
