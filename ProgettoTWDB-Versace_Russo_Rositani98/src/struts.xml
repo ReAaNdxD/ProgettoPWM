@@ -7,10 +7,12 @@
 	<constant name="struts.devMode" value="false" />
 	<package name="default" namespace="/" extends="struts-default">
 
-		<action name="Home" class="it.unirc.pwm.ast.home.RichiediHome">
-			<result name="SUCCESS">/home.jsp</result>
-		</action>
+		<!-- <action name="Home" class="it.unirc.pwm.ast.home.RichiediHome"> <result 
+			name="SUCCESS">/home.jsp</result> </action> -->
 
+		<action name="Login" class="iit.unirc.pwm.actions">
+			<result name="SUCCESS">/login.jsp</result>
+		</action>
 	</package>
 
 	<include file="it/unirc/pwm/ast/home/home.xml" />
