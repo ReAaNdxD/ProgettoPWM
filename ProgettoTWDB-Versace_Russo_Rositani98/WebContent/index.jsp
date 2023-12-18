@@ -1,4 +1,8 @@
+<!-- Vado a integrare la direttiva  -->
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
 <%@page import="it.unirc.db.ecommerce.views.GridProduct"%>
+
 <%@page import="it.unirc.db.ecommerce.beans.Cliente"%>
 <%@page import="it.unirc.db.ecommerce.views.ViewProduct"%>
 <%@page import="it.unirc.db.ecommerce.beans.ArticoloDAO"%>
@@ -11,6 +15,8 @@
     pageEncoding="utf-8"%>
 <%@page import="it.unirc.db.ecommerce.beans.CategoriaDAO"%>
 <%@page import="it.unirc.db.ecommerce.beans.Categoria"%>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 

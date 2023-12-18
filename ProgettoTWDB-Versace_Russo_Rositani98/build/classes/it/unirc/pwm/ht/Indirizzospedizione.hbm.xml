@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 12 dic 2023, 16:08:37 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Indirizzospedizione" optimistic-lock="none" table="indirizzospedizione">
+        <id name="idIndirizzoSpedizione" type="java.lang.Integer">
+            <column name="idIndirizzoSpedizione"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="it.unirc.pwm.ht.Cliente" fetch="select" name="cliente">
+            <column name="idCliente" not-null="true"/>
+        </many-to-one>
+        <property name="preferito" type="byte">
+            <column name="preferito" not-null="true"/>
+        </property>
+        <property name="regione" type="string">
+            <column length="45" name="regione" not-null="true"/>
+        </property>
+        <property name="provincia" type="string">
+            <column length="45" name="provincia" not-null="true"/>
+        </property>
+        <property name="citta" type="string">
+            <column length="45" name="citta" not-null="true"/>
+        </property>
+        <property name="via" type="string">
+            <column length="45" name="via" not-null="true"/>
+        </property>
+        <property name="ncivico" type="string">
+            <column length="5" name="nCivico" not-null="true"/>
+        </property>
+        <property name="cap" type="int">
+            <column name="cap" not-null="true"/>
+        </property>
+        <property name="telefono" type="long">
+            <column name="telefono" not-null="true"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="ordines" table="ordine">
+            <key>
+                <column name="idIndirizzoSpedizione"/>
+            </key>
+            <one-to-many class="it.unirc.pwm.ht.Ordine"/>
+        </set>
+    </class>
+</hibernate-mapping>

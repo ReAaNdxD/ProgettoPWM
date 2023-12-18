@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 12 dic 2023, 16:08:37 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Prodotto" optimistic-lock="none" table="prodotto">
+        <id name="idProdotto" type="java.lang.Integer">
+            <column name="idProdotto"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="it.unirc.pwm.ht.Sottocategoria" fetch="select" name="sottocategoria">
+            <column name="idSottocategoria" not-null="true"/>
+        </many-to-one>
+        <property name="nome" type="string">
+            <column length="45" name="nome" not-null="true"/>
+        </property>
+        <property name="descrizioneBreve" type="string">
+            <column length="45" name="descrizioneBreve" not-null="true"/>
+        </property>
+        <property name="descrizioneDettagliata" type="string">
+            <column length="140" name="descrizioneDettagliata" not-null="true"/>
+        </property>
+        <property name="marca" type="string">
+            <column length="45" name="marca" not-null="true"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="articolos" table="articolo">
+            <key>
+                <column name="idProdotto" not-null="true"/>
+            </key>
+            <one-to-many class="it.unirc.pwm.ht.Articolo"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 12 dic 2023, 16:08:37 by Hibernate Tools 6.1.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="progetto_pwm" name="it.unirc.pwm.ht.Categoria" optimistic-lock="none" table="categoria">
+        <id name="idCategoria" type="java.lang.Integer">
+            <column name="idCategoria"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nome" type="string">
+            <column length="45" name="nome" not-null="true"/>
+        </property>
+        <property name="descrizione" type="string">
+            <column length="140" name="descrizione" not-null="true"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="sottocategorias" table="sottocategoria">
+            <key>
+                <column name="idCategoria" not-null="true"/>
+            </key>
+            <one-to-many class="it.unirc.pwm.ht.Sottocategoria"/>
+        </set>
+    </class>
+</hibernate-mapping>
