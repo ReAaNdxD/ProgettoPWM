@@ -102,21 +102,16 @@
 							<%
 							}
 							%>
-							<s:form id="form" class="form" method="post" class="form-signin"
-							action="/Login" >
-							
+							<s:form id="form" class="form form-signin" method="post"
+								action="/Login">
+
 								<div class="row">
 									<div class=" col-12">
 										<div class="form-group">
 											<label for="email" class="font-weight-bold"
-												style="font-size: 20px;">Email</label> <s:textfield name="cliente.email"  id="email"
-												placeholder="Email" type="text" 
-												value="<%Cookie[] cookies = request.getCookies();
-if (cookies != null)
-	for (Cookie cookie : cookies) {
-		if (cookie.getName().equals("emailDAGCliente"))
-			out.write(cookie.getValue());
-	}%>"/>
+												style="font-size: 20px;">Email</label>
+											<s:textfield name="cliente.email" id="email"
+												placeholder="Email" type="text"/>
 											<!-- small element serve per mostrare un messaggio d'errore nel caso 
 					in cui gli input siano errati -->
 											<small></small>
@@ -125,9 +120,10 @@ if (cookies != null)
 									<div class="col-12">
 										<div class="form-group">
 											<label for="password" class="font-weight-bold"
-												style="font-size: 20px;">Password</label> <s:password
-												id="password" placeholder="Password" type="password"
-												name="cliente.password"/><small></small>
+												style="font-size: 20px;">Password</label>
+											<s:password id="password" placeholder="Password"
+												type="password" name="cliente.password" />
+											<small></small>
 										</div>
 									</div>
 									<div class="col-12">
