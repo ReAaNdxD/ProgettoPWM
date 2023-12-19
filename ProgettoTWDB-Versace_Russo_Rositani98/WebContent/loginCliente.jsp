@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,24 +38,6 @@
 
 </head>
 <body>
-	<!-- 	<form class="form-signin" action="/Login" method="post">
-		<h1 class="h3 mb-3 font-weight-normal">Login</h1>
-		<label for="inputUsername" class="sr-only">Username</label> <input
-			name="username" type="text" id="inputUsername" class="form-control"
-			placeholder="username" required> <label for="inputPassword"
-			class="sr-only">Password</label> <input name="password"
-			type="password" id="inputPassword" class="form-control"
-			placeholder="password" required>
-		<div class="checkbox mb-3">
-			<label> <input type="checkbox" value="remember-me">
-				Remember me
-			</label>
-		</div>
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Accedi</button>
-	</form> -->
-
-
-
 
 	<section id="contact-us" class="contact-us section">
 		<div class="container" style="max-width: 600px">
@@ -119,22 +102,21 @@
 							<%
 							}
 							%>
-							<!-- <form id="form" class="form" method="post" class="form-signin"
-							action="/Login" > -->
-							<form id="form" class="form" method="post" class="form-signin"
-								action="/Login">
+							<s:form id="form" class="form" method="post" class="form-signin"
+							action="/Login" >
+							
 								<div class="row">
 									<div class=" col-12">
 										<div class="form-group">
 											<label for="email" class="font-weight-bold"
-												style="font-size: 20px;">Email</label> <input id="email"
-												placeholder="Email" type="text" name="email"
+												style="font-size: 20px;">Email</label> <s:textfield name="cliente.email"  id="email"
+												placeholder="Email" type="text" 
 												value="<%Cookie[] cookies = request.getCookies();
 if (cookies != null)
 	for (Cookie cookie : cookies) {
 		if (cookie.getName().equals("emailDAGCliente"))
 			out.write(cookie.getValue());
-	}%>">
+	}%>"/>
 											<!-- small element serve per mostrare un messaggio d'errore nel caso 
 					in cui gli input siano errati -->
 											<small></small>
@@ -143,9 +125,9 @@ if (cookies != null)
 									<div class="col-12">
 										<div class="form-group">
 											<label for="password" class="font-weight-bold"
-												style="font-size: 20px;">Password</label> <input
+												style="font-size: 20px;">Password</label> <s:password
 												id="password" placeholder="Password" type="password"
-												name="password"><small></small>
+												name="cliente.password"/><small></small>
 										</div>
 									</div>
 									<div class="col-12">
@@ -160,7 +142,7 @@ if (cookies != null)
 										</div>
 									</div>
 								</div>
-							</form>
+							</s:form>
 							<div class="container">
 								<div class="text-center" style="margin-top: 20px">
 									<a href="/RegistraNuovoCliente">Sei nuovo su DAG?
