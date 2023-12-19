@@ -10,8 +10,8 @@
 		<!-- <action name="Home" class="it.unirc.pwm.ast.home.RichiediHome"> <result 
 			name="SUCCESS">/home.jsp</result> </action> -->
 
-		<action name="Login" class="it.unirc.pwm.actions">
-			<result name="SUCCESS">/login.jsp</result>
+		<action name="Index">
+			<result>/index.jsp</result>
 		</action>
 	</package>
 
