@@ -119,9 +119,46 @@ public class ArticoloDAOHibernateImpl implements ArticoloDAO {
 	}
 
 	@Override
-	public Vector<GridProduct> getAllRandomProducts() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<GridProduct> getAllRandomProducts() {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = null;
+		List<GridProduct> result = null;
+
+		try {
+			transaction = session.beginTransaction();
+
+			String queryHQL = "SELECT  *\r\n" + 
+					"FROM   (\r\n" + 
+					"    SELECT  a.idprodotto,\r\n" + 
+					"            a.idarticolo,\r\n" + 
+					"            a.prezzo,\r\n" + 
+					"            a.quantita AS disponibilit�,\r\n" + 
+					"            V.nomeAzienda, \r\n" + 
+					"            p.nome, \r\n" + 
+					"            p.marca,\r\n" + 
+					"            p.idsottocategoria,\r\n" + 
+					"            p.descrizionebreve,\r\n" + 
+					"            p.descrizionedettagliata,\r\n" + 
+					"            v.idvenditore \r\n" + 
+					"FROM articolo A JOIN prodotto P ON A.idprodotto=P.idprodotto\r\n" + 
+					"                JOIN sottocategoria S ON p.idsottocategoria=s.idsottocategoria\r\n" + 
+					"                JOIN categoria C ON s.idcategoria=c.idcategoria\r\n" + 
+					"                JOIN venditore V ON a.idvenditore=v.idvenditore\r\n" + 
+					"    ORDER BY DBMS_RANDOM.RANDOM) a\r\n" + 
+					"WHERE  rownum < 21";
+			result = session.createQuery(queryHQL, GridProduct.class).list();
+
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			result = null;
+		} catch (Exception e) {
+			result = null;
+		} finally {
+			session.close();
+		}
+
+		return result;
 	}
 
 	@Override
@@ -131,9 +168,34 @@ public class ArticoloDAOHibernateImpl implements ArticoloDAO {
 	}
 
 	@Override
-	public Vector<ViewProduct> getAllArticoliCliente(Cliente cliente) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ViewProduct> getAllArticoliCliente(Cliente cliente) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = null;
+		List<ViewProduct> result = null;
+
+		try {
+			transaction = session.beginTransaction();
+
+			String queryHQL = "SELECT A.idArticolo, p.nome, CO.quantita, CO.prezzoAcquisto, V.idVenditore, V.nomeAzienda, C.idCarrello, A.quantita as disponibilit�\r\n"
+					+ "FROM carrello C JOIN cliente CL ON C.idCliente=CL.idCliente\r\n"
+					+ "				JOIN compone CO ON C.idCarrello=CO.idCarrello\r\n"
+					+ "                JOIN articolo A ON CO.idArticolo=A.idArticolo\r\n"
+					+ "                JOIN prodotto P ON A.idProdotto=P.idProdotto\r\n"
+					+ "                JOIN venditore V ON A.idVenditore=V.idVenditore\r\n"
+					+ "WHERE CL.idCliente=? AND C.attivo=1";
+			result = session.createQuery(queryHQL, ViewProduct.class).list();
+
+			transaction.commit();
+		} catch (HibernateException e) {
+			transaction.rollback();
+			result = null;
+		} catch (Exception e) {
+			result = null;
+		} finally {
+			session.close();
+		}
+
+		return result;
 	}
 
 	@Override

@@ -2,15 +2,30 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <%@page import="it.unirc.db.ecommerce.views.GridProduct"%>
+<%@page import="it.unirc.db.ecommerce.views.ViewProduct"%>
+<%@page import="it.unirc.db.ecommerce.views.Compone"%>
 
 <%@page import="it.unirc.db.ecommerce.beans.Cliente"%>
-<%@page import="it.unirc.db.ecommerce.views.ViewProduct"%>
+<%@page import="it.unirc.pwm.ht.Cliente"%>
+
+
 <%@page import="it.unirc.db.ecommerce.beans.ArticoloDAO"%>
-<%@page import="it.unirc.db.ecommerce.views.Compone"%>
+<%@page import="it.unirc.pwm.ht.dao.ArticoloDAO"%>
+
 <%@page import="java.util.Vector"%>
+
 <%@page import="it.unirc.db.ecommerce.beans.Carrello"%>
+<%@page import="it.unirc.pwm.ht.Carrello"%>
+
+
 <%@page import="it.unirc.db.ecommerce.beans.CarrelloDAO"%>
+<%@page import="it.unirc.pwm.ht.dao.CarrelloDAO"%>
+
+
 <%@page import="it.unirc.db.ecommerce.beans.join.ArticoloComponeCarrelloDAO"%>
+<%@page import="it.unirc.db.ecommerce.beans.join.ArticoloComponeCarrelloDAO"%>
+
+
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@page import="it.unirc.db.ecommerce.beans.CategoriaDAO"%>
