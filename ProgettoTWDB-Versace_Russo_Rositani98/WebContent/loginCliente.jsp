@@ -110,8 +110,10 @@
 										<div class="form-group">
 											<label for="email" class="font-weight-bold"
 												style="font-size: 20px;">Email</label>
+												<s:set var="emailClass" value="form-control form-group" />
 											<s:textfield name="cliente.email" id="email"
-												placeholder="Email" type="text"/>
+												placeholder="Email" type="text" class="%{#emailClass}">
+											</s:textfield>
 											<!-- small element serve per mostrare un messaggio d'errore nel caso 
 					in cui gli input siano errati -->
 											<small></small>
@@ -121,8 +123,11 @@
 										<div class="form-group">
 											<label for="password" class="font-weight-bold"
 												style="font-size: 20px;">Password</label>
+												<s:set var="emailClass" value="form-control form-group" />
 											<s:password id="password" placeholder="Password"
-												type="password" name="cliente.password" />
+												type="password" name="cliente.password" class="%{#emailClass}">
+												
+											</s:password>
 											<small></small>
 										</div>
 									</div>
