@@ -25,5 +25,7 @@
 			<result>/loginCliente.jsp</result>
 		</action>
 	</package>
-
+	
+	
+<include file="it/unirc/pwm/ast/home/home.xml" />
 </struts>

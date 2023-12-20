@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="home" namespace="/" extends="struts-default">
+
+		<action name="RichiediGallery">
+			<result>/gallery.jsp</result>
+		</action>
+
+		<action name="RichiediCurrentSeason"
+			class="it.unirc.pwm.ast.home.RichiediCurrentSeason">
+			<result name="SUCCESS">/currentSeason.jsp</result>
+		</action>
+
+		<action name="RichiediStatistics">
+			<result>/statistics.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
