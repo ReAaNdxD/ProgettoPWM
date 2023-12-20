@@ -13,11 +13,11 @@
 		<action name="Index">
 		<interceptor-ref name="cookie" />
 		<interceptor-ref name="defaultStack" />
-			<result>/loginCliente.jsp</result>
+			<result>/loginClienteCliente.jsp</result>
 		</action>
 		
-		<action name="RegistraNuovoCliente">
-			<result>/loginCliente.jsp</result>
+		<action name="NuovoCliente">
+			<result>/loginClienteCliente.jsp</result>
 		</action>
 	</package>
 	
