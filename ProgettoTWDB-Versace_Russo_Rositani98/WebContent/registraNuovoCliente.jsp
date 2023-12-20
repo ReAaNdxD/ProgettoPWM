@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +39,7 @@
 
 </head>
 <body>
-<%-- 	<%
+	<%-- 	<%
 		if (request.getAttribute("errore") != null) {
 			//Campi sbagliati
 	%>
@@ -109,48 +110,48 @@
 								<h3 style="color: #f7941d">Crea un nuovo account</h3>
 							</div>
 							<%
-								/* request.setAttribute("errore", false);
-								request.setAttribute("email", false);
-								request.setAttribute("salva", false); */
-								if (request.getAttribute("errore") != null) {
+							/* request.setAttribute("errore", false);
+							request.setAttribute("email", false);
+							request.setAttribute("salva", false); */
+							if (request.getAttribute("errore") != null) {
 							%>
 							<div class="error-page">
 								<div class="error-inner">
 									<h5 class="h5" style="color: #F7941D">
 										<%
-											out.append("Alcuni campi sono sbagliati :-(");
+										out.append("Alcuni campi sono sbagliati :-(");
 										%>
 									</h5>
 								</div>
 							</div>
 							<%
-								}
-								if (request.getAttribute("email") != null) {
-									//L'email già esiste
+							}
+							if (request.getAttribute("email") != null) {
+							//L'email già esiste
 							%><div class="error-page">
 								<div class="error-inner">
 									<h5 class="h5" style="color: #F7941D">
 										<%
-											out.append("L'email inserita è già in uso, inserisci un altra email");
+										out.append("L'email inserita è già in uso, inserisci un altra email");
 										%>
 									</h5>
 								</div>
 							</div>
 							<%
-								}
-								if (request.getAttribute("salva") != null) {
-									//Non è riuscito a salvarlo
+							}
+							if (request.getAttribute("salva") != null) {
+							//Non è riuscito a salvarlo
 							%><div class="error-page">
 								<div class="error-inner">
 									<h5 class="h5" style="color: #F7941D">
 										<%
-											out.append("Non siamo riusciti a creare il tuo account riprova");
+										out.append("Non siamo riusciti a creare il tuo account riprova");
 										%>
 									</h5>
 								</div>
 							</div>
 							<%
-								}
+							}
 							%>
 							<form id="form" class="form" method="post"
 								action="CreaNuovoCliente" onsubmit="return valida()">
@@ -223,7 +224,8 @@
 		</div>
 	</section>
 
-	<script type="text/javascript" charset="UTF-8" src="/js/registration.js"></script>
+	<script type="text/javascript" charset="UTF-8"
+		src="/js/registration.js"></script>
 
 
 

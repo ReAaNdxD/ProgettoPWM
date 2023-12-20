@@ -5,11 +5,9 @@
 
 <struts>
 
-	<package name="actions" namespace="/" extends="struts-default">
+	<package name="actions" namespace="/actions" extends="struts-default">
 
-		<action name="RegistraNuovoCliente">
-			<result>/registraNuovoCliente.jsp</result>
-		</action>
+		
 
 		<!-- <action name="RichiediCurrentSeason"
 			class="it.unirc.pwm.ast.home.RichiediCurrentSeason">

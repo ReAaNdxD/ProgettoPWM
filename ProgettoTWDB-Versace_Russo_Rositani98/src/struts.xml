@@ -24,6 +24,10 @@
 		<interceptor-ref name="defaultStack" />
 			<result>/loginCliente.jsp</result>
 		</action>
+		
+		<action name="RegistraNuovoCliente">
+			<result>/registraNuovoCliente.jsp</result>
+		</action>
 	</package>
 	
 	
