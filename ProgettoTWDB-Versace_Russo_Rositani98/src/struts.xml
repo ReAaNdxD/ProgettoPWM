@@ -9,15 +9,6 @@
 	<package name="default" namespace="/" extends="struts-default">
 
 
-	<!-- 	<interceptors>
-			<interceptor name="cookie"
-				class="org.apache.struts2.interceptor.CookieInterceptor" />
-			<interceptor-stack name="defaultStack">
-				Altri interceptor della stack predefinita
-				<interceptor-ref name="cookie" />
-			</interceptor-stack>
-		</interceptors> -->
-
 		<default-interceptor-ref name="defaultStack" />
 		<action name="Index">
 		<interceptor-ref name="cookie" />
@@ -26,7 +17,7 @@
 		</action>
 		
 		<action name="RegistraNuovoCliente">
-			<result>/registraNuovoCliente.jsp</result>
+			<result>/loginCliente.jsp</result>
 		</action>
 	</package>
 	
