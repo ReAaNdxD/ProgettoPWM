@@ -27,5 +27,5 @@
 	</package>
 	
 	
-<include file="it/unirc/pwm/ast/home/home.xml" />
+<include file="it/unirc/pwm/actions/actions.xml"/>
 </struts>

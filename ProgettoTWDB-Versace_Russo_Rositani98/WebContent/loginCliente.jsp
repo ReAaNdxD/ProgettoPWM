@@ -144,8 +144,8 @@
 							</s:form>
 							<div class="container">
 								<div class="text-center" style="margin-top: 20px">
-									<a href="/RegistraNuovoCliente">Sei nuovo su DAG?
-										Registrati</a>
+									<s:a action="RegistraNuovoCliente">Sei nuovo su DAG?
+										Registrati</s:a>
 								</div>
 							</div>
 						</div>
