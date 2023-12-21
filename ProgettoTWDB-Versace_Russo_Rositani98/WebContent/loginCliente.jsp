@@ -3,7 +3,7 @@
 <html>
 
 	<head>
-    <title>Logn</title>
+    <title>Login</title>
 	</head>
 
 	<body>
