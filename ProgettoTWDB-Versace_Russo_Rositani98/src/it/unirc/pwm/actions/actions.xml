@@ -5,18 +5,16 @@
 
 <struts>
 
-	<package name="actions" namespace="/actions" extends="struts-default">
-
-		
-
-		<!-- <action name="RichiediCurrentSeason"
-			class="it.unirc.pwm.ast.home.RichiediCurrentSeason">
-			<result name="SUCCESS">/currentSeason.jsp</result>
+	<package name="actions" namespace="/actions"
+		extends="struts-default">
+		<action name="NuovoCliente">
+			<result>/LoginCliente.jsp</result>
 		</action>
 
-		<action name="RichiediStatistics">
-			<result>/statistics.jsp</result>
-		</action> -->
+
+		<!-- <action name="RichiediCurrentSeason" class="it.unirc.pwm.ast.home.RichiediCurrentSeason"> 
+			<result name="SUCCESS">/currentSeason.jsp</result> </action> <action name="RichiediStatistics"> 
+			<result>/statistics.jsp</result> </action> -->
 
 	</package>
 

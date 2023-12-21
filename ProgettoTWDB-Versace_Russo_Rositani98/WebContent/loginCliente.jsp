@@ -14,7 +14,7 @@
 	    	<s:password name="user.password" label="Password"/>
 	    	<s:submit/>
 		</s:form>
-		<s:a action="NuovoCliente">Sei nuovo su DAG?</s:a>
+		<a href="<s:url action='actions/NuovoCliente'/>">Passaggio dati (metodo base - versione con XML)</a> 
 	    <hr>	
 	</body>
 	

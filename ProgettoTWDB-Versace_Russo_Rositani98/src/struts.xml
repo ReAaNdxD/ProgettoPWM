@@ -13,10 +13,6 @@
 		<action name="Index">
 			<result>/loginCliente.jsp</result>
 		</action>
-
-		<action name="NuovoCliente">
-			<result>/registraNuovoCliente.jsp</result>
-		</action>
 	</package>
 
 
