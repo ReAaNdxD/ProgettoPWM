@@ -13,7 +13,7 @@
 		
 		<action name="RegistraNuovoCliente" class="it.unirc.pwm.actions.RegistraNuovoCliente">
 			<result name="SUCCESS">/loginCliente.jsp</result>
-			<result name="ERROR">/registraNuovoCliente.jsp</result>
+			<result name="error">/registraNuovoCliente.jsp</result>
 		</action>
 		
 		

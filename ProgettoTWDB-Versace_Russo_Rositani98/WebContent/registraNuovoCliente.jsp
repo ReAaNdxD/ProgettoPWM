@@ -18,7 +18,7 @@
 <%-- 	    	<s:date name="cliente.dataDiNascita" format="dd/mm/yyyy"/>
  --%>	    	<s:textfield name="cliente.email" label="Email"/>
 	    	<s:password name="cliente.password" label="Password"/>
-	    	<s:password name="cliente.verificaPassword" label="Riscrivi Password"/>
+	    	<s:password label="Riscrivi Password"/>
 	    	
 	    	<s:submit/>
 		</s:form>

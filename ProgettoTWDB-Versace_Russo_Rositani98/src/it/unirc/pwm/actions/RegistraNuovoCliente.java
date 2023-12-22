@@ -11,7 +11,7 @@ public class RegistraNuovoCliente extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	private Cliente cliente;
 
-	public String execute() {
+	public String execute(){
 		ClienteDAO cDAO = ClienteDAOFactory.getDAO();
 		if (!cDAO.checkEmail(this.cliente.getEmail())) {
 			System.out.println("ciao");
