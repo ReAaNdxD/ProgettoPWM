@@ -10,18 +10,14 @@
 		<action name="NuovoCliente">
 			<result>/registraNuovoCliente.jsp</result>
 		</action>
-		
+
 		<action name="RegistraNuovoCliente" class="it.unirc.pwm.actions.RegistraNuovoCliente">
-			<result name="SUCCESS">/loginCliente.jsp</result>
-			<result name="error">/registraNuovoCliente.jsp</result>
+			<result name="SUCCESS">/registraNuovoCliente.jsp</result>
+			<result name="ERROR">/registraNuovoCliente.jsp</result>
 		</action>
-		
-		
-
-
-		<!-- <action name="RichiediCurrentSeason" class="it.unirc.pwm.ast.home.RichiediCurrentSeason"> 
-			<result name="SUCCESS">/currentSeason.jsp</result> </action> <action name="RichiediStatistics"> 
-			<result>/statistics.jsp</result> </action> -->
+		<!-- <action name="RegistraNuovoCliente" class="it.unirc.pwm.actions.RegistraNuovoCliente"> 
+			<result name="success">/registraNuovoCliente.jsp</result> <result name="error">/registraNuovoCliente.jsp</result> 
+			</action> -->
 
 	</package>
 
