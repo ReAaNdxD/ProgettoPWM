@@ -14,7 +14,7 @@
 	    	<s:password name="user.password" label="Password"/>
 	    	<s:submit/>
 		</s:form>
-		<a href="<s:url action='actions/NuovoCliente'/>">Passaggio dati (metodo base - versione con XML)</a> 
+		<a href="<s:url action='actions/NuovoCliente'/>">Sei un nuovo Cliente? Registrati</a> 
 	    <hr>	
 	</body>
 	

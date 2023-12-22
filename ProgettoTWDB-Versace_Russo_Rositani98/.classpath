@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
@@ -32,5 +33,7 @@
 	<classpathentry kind="lib" path="/hibernate_tools/lib/log4j-core-2.19.0.jar"/>
 	<classpathentry kind="lib" path="/hibernate_tools/lib/protobuf-java-3.19.4.jar"/>
 	<classpathentry kind="lib" path="/hibernate_tools/lib/txw2-3.0.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-jquery-plugin-5.0.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-dojo-plugin-2.3.37.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

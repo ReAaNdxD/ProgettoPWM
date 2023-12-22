@@ -8,8 +8,15 @@
 	<package name="actions" namespace="/actions"
 		extends="struts-default">
 		<action name="NuovoCliente">
-			<result>/LoginCliente.jsp</result>
+			<result>/registraNuovoCliente.jsp</result>
 		</action>
+		
+		<action name="RegistraNuovoCliente">
+			<result name="SUCCESS">/loginCliente.jsp</result>
+			<result name="ERROR">/registraNuovoCliente.jsp</result>
+		</action>
+		
+		
 
 
 		<!-- <action name="RichiediCurrentSeason" class="it.unirc.pwm.ast.home.RichiediCurrentSeason"> 
