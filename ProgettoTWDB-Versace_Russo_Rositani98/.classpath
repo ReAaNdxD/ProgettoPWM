@@ -35,5 +35,6 @@
 	<classpathentry kind="lib" path="/hibernate_tools/lib/txw2-3.0.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-jquery-plugin-5.0.3.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-dojo-plugin-2.3.37.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/asm-9.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
