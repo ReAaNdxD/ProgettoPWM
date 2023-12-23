@@ -12,7 +12,7 @@
 <body>
 <hr>
 		<h4>Registrazione</h4> 	
-		<s:form action="actions/RegistraNuovoCliente">
+		<s:form action="RegistraNuovoCliente">
 	    	<s:textfield name="cliente.nome" label="Nome"/>
 	    	<s:textfield name="cliente.cognome" label="Cognome"/>
 <%-- 	    	<s:date name="cliente.dataDiNascita" format="dd/mm/yyyy"/>
