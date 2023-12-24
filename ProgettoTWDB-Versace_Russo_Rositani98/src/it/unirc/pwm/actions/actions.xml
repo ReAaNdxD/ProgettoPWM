@@ -7,17 +7,14 @@
 
 	<package name="actions" namespace="/actions"
 		extends="struts-default">
-		<action name="NuovoCliente">
-			<result>/registraNuovoCliente.jsp</result>
-		</action>
 
-		<action name="RegistraNuovoCliente" class="it.unirc.pwm.actions.RegistraNuovoCliente">
+
+		<!-- <action name="RegistraNuovoCliente"
+			class="it.unirc.pwm.actions.RegistraNuovoCliente">
 			<result name="SUCCESS">/registraNuovoCliente.jsp</result>
 			<result name="ERROR">/registraNuovoCliente.jsp</result>
-		</action>
-		<!-- <action name="RegistraNuovoCliente" class="it.unirc.pwm.actions.RegistraNuovoCliente"> 
-			<result name="success">/registraNuovoCliente.jsp</result> <result name="error">/registraNuovoCliente.jsp</result> 
-			</action> -->
+		</action> -->
+
 
 	</package>
 
