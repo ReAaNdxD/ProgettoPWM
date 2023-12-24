@@ -5,17 +5,17 @@
 
 <struts>
 
-	<package name="actions" namespace="/actions"
-		extends="struts-default">
+	<package name="actions" namespace="/" extends="struts-default">
 
-
-		<!-- <action name="RegistraNuovoCliente"
+		<action name="NuovoCliente">
+			<result>/registraNuovoCliente.jsp</result>
+		</action>
+		<action name="RegistraNuovoCliente"
 			class="it.unirc.pwm.actions.RegistraNuovoCliente">
-			<result name="SUCCESS">/registraNuovoCliente.jsp</result>
-			<result name="ERROR">/registraNuovoCliente.jsp</result>
-		</action> -->
-
+			<result name="SUCCESS">/loginCliente.jsp</result>
+		</action>
 
 	</package>
 
+	
 </struts>
