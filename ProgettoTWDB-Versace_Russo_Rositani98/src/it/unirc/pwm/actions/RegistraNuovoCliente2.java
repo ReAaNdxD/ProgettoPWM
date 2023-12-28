@@ -15,7 +15,7 @@ public class RegistraNuovoCliente2 extends ActionSupport {
 		ClienteDAO cDAO = ClienteDAOFactory.getDAO();
 		if (!cDAO.checkEmail(this.cliente.getEmail())) {
 			System.out.println("ciao");
-//			se non ha inserito un email che già c'è nel DB
+
 			if (cDAO.salva(cliente))
 				return SUCCESS;
 		}

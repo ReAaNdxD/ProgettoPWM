@@ -22,7 +22,7 @@ public class RegistraNuovoCliente extends ActionSupport {
 			return SUCCESS;
 		}
 		return ERROR;
-		// l'oggetto user � inizializzato da struts
+		
 
 	}
 
