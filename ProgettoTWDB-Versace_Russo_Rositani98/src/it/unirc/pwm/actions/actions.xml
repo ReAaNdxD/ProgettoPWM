@@ -7,7 +7,7 @@
 		extends="struts-default">
 
 
-		<!-- <+action name="RegistraNuovoCliente"
+		<!-- <action name="RegistraNuovoCliente"
 			class="it.unirc.pwm.actions.RegistraNuovoCliente">
 			<result name="SUCCESS">/loginCliente.jsp</result>
 		</action> -->
