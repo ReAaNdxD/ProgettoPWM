@@ -32,7 +32,7 @@
             <key>
                 <column name="idCliente" not-null="true"/>
             </key>
-            <one-to-many class="it.unirc.pwm.ht.Indirizzospedizione"/>
+            <one-to-many class="it.unirc.pwm.ht.IndirizzoSpedizione"/>
         </set>
         <set fetch="select" inverse="true" lazy="true" name="cartacreditos" table="possiede">
             <key>
